@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+        <link rel="stylesheet" href="icons/fontawesome-free-5.8.2-web/css/all.css">
+
+        <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div id="container">
+
+    <h1>Kalkulator szczęścia na emeryturze.</h1>
+
+<div id="myHeader" class="header">
+    <div id="questionnaire" class="header-list">
+        <p>Odpowiedz na kilka pytań.</p>
+        <div>
+                <i class="fas fa-pen-alt">Ile zarabiasz.</i>
+            <input type="number" min="0" id="payment" placeholder="napisz...">
+        </div>
+        <div>
+            <i class="fas fa-pen-alt"> Ile masz lat?</i>
+            <input type="number" min="0" id="age" maxlength=2 placeholder="napisz...">
+        </div>
+        <div>       
+            <i class="fas fa-pen-alt"> Ile masz oszczędności.</i>
+            <input type="number" id="saving" placeholder="napisz...">
+        </div>
+        <div>  
+            <i class="fas fa-pen-alt"> Kiedy przejdziesz na emeryturę?</i>
+            <input type="number" min="0" id="retirement" maxlength=2 placeholder="napisz...">
+        </div>
+        <div>       
+            <i class="fas fa-pen-alt"> Ile lat chciałbyś żyć ?</i>
+            <input type="number" min="0" id="death" maxlength=3 placeholder="napisz...">
+        </div>
+        <div>       
+            <i class="fas fa-pen-alt"> Ile chcesz dostawać na emeryturze?</i>
+            <input type="number" min="0" id="pension" placeholder="napisz...">
+        </div>
+        
+    </div>
+    <button id="addBtn" class="addBtn">Jak wpisałeś wszystko<br> NACIŚNIJ MNIE</button>
+    <div class= "calculator-result">
+        <h2>Nasz kalkulator policzy ile będziesz <span>musiał/a miesięcznie odkładać</span>,    aby osiągnąć takie wynagrodzenie na emeryturze. </h2>
+        <input type="number" id="calculatorResult" placeholder="">
+    </div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
