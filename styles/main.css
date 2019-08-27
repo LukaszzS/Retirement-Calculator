@@ -17,23 +17,22 @@ header{
 }
 #questionnaire{
     display: flex;
-    flex-direction: row;
-justify-content: space-around;
+    /* flex-direction: row; */
+    justify-content: space-around;
 
-    /* align-content: center; */
-    /* justify-content: space-around; */
 }
 
 .questionnaire{
-display: flex;
+    display: flex;
+    flex-direction: column;
 
 }
-.questionnaire:first-child{
+/* .questionnaire:first-child{
     width: 60%;
 }
 .questionnaire:last-child{
 width: 20%;
-}
+} */
 
 
 #questionnaire-result{
