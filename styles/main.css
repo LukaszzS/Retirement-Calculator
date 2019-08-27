@@ -32,7 +32,16 @@ display: flex;
 }
 .questionnaire-result{
     display: flex;
+    justify-content: space-around;
 }
+
+.questionnaire-result .result{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+
 #questionnaire{
     border: 1px dotted black;
 }
@@ -48,4 +57,4 @@ footer{
 }
 footer a {
     color: #4267B2;
-} 
+}
