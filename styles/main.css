@@ -1,15 +1,13 @@
 html {
     scroll-behavior: smooth;
 }
-
 body {
     width: 96%;
     margin: 0 auto;
     padding-top: 10px; 
-    font-family: "Roboto", sans-serif;
     background-color: rgb(224, 216, 198);
+    font-family: "Roboto", sans-serif;
 }
-
 .header-container{
     display: flex;
     justify-content: space-around;
@@ -17,48 +15,80 @@ body {
     color: rgb(224, 216, 198);
 }
 .header-container h1{
-font-size: 48px;
-margin: 0 auto;
+    margin: 0 auto;
+    font-size: 48px;
 }
 #questionnaire{
-display: flex;
-justify-content: space-around;
-margin-top:40px;
+    display: flex;
+    justify-content: space-around;
+    margin-top:40px;
 }
 #questionnaire button{
-    background-color: rgb(224, 216, 198);
     border:transparent;
+    background-color: rgb(224, 216, 198);
     cursor: pointer;
-    
+    /* transition: 0.3s transform linear; */
+
+
 }
+#questionnaire button:hover{
+    /* transform: scale(1.2);
+    transition: 0.2s transform linear; */
+    animation: bounce 1s;
+}
+/*  */
+@keyframes bounce {
+    0%,
+    20%,
+    60%,
+    100% {
+        -webkit-transform: rotate( -45deg);
+        transform: rotate( -45deg);
+    }
+ 
+    20% {
+  -webkit-transform: rotate( 45deg);
+        transform: rotate( 45deg);
+    }
+    40% {
+  -webkit-transform: rotate( -45deg);
+        transform: rotate( -45deg);
+    }
+        /* 40% {
+      -webkit-transform: rotateY( -45deg);
+    transform: rotateY( -45deg);
+    }
+    60% {
+      -webkit-transform: rotateY( 45deg);
+    transform: rotateY( 45deg);
+    } */
+
+  }
+
+/*  */
 #questionnaire p{
-    text-align: center;
     color:rgb(52, 36, 17);
+    text-align: center;
 }
 #questionnaire p span{
     color:red;
 }
-/* --------------------------------------- */
 .questionnaire{
-display: flex;
-
+    display: flex;
 }
 .lebel-all,
 .input-all {
     display: flex;
     flex-direction: column;
-    line-height: 145%;
+    line-height: 150%;
     font-size: 24px;
 }
 .input-all input{
-    margin-top: 13.5px;
+    height: 25px;
+    margin-top: 4px;
     margin-left: 50px;
     color: rgb(59, 7, 7);
 }
-
-
-/* --------------------------------------- */
-
 .questionnaire-result{
     display: flex;
     justify-content: space-around;
@@ -66,43 +96,43 @@ display: flex;
     margin-top: 50px;
 }
 .questionnaire-result-img{
+    width: 50%;
     background-image: url(/img/emeryt-menC.png);
     background-size: contain;
     background-position: left;
     background-repeat: no-repeat;
-    width: 50%;
 }
 .questionnaire-result-img h1{
-margin-top: 20%;
-margin-left: 50%;
-padding-bottom: 15%;
-color: rgb(52, 36, 17);
-font-size: 24px;
-text-align: center;
-width: 60%;
-font-weight: 100;
+    width: 60%;
+    margin-top: 20%;
+    margin-left: 50%;
+    padding-bottom: 15%;
+    color: rgb(52, 36, 17);
+    font-size: 24px;
+    text-align: center;
+    font-weight: 100;
 }
 .questionnaire-result .result{
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     width: 40%;
-    text-align: center;
     color: red;
     font-size: 40px;
+    text-align: center;
 }
 .questionnaire-result .result h3{
-color: rgb(52, 36, 17);
-font-size: 18px;
-font-weight: 900;
-text-decoration: underline;
-margin-left:30px;
+    margin-left:30px;
+    color: rgb(52, 36, 17);
+    font-size: 18px;
+    font-weight: 900;
+    text-decoration: underline;
 }
 footer{
+    padding-bottom: 10px;
+    color: #4267B2;
     text-align: center;
     font-size: 8px;
-    padding-bottom: 10px;
-    color: #4267B2
 }
 footer a {
     color: #4267B2;
