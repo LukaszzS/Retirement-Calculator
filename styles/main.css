@@ -1,0 +1,80 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 96%;
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+
+}
+header{
+    border: 1px solid red;
+}
+.header-container{
+    display: flex;
+    justify-content: center;
+}
+#questionnaire{
+    display: flex;
+    flex-direction: row;
+justify-content: space-around;
+
+    /* align-content: center; */
+    /* justify-content: space-around; */
+}
+
+.questionnaire{
+display: flex;
+
+}
+.questionnaire:first-child{
+    width: 60%;
+}
+.questionnaire:last-child{
+width: 20%;
+}
+
+
+#questionnaire-result{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.questionnaire-result-img{
+    /* width: 80%;
+    padding-bottom: 30%;
+    background-image: url("/img/oldmantalkingsm.gif");
+    background-repeat: no-repeat;
+    background-position: right;
+    z-index: 0; */
+}
+.questionnaire-result-text-big{
+    /* z-index: 1;
+    position: relative;
+    left: -20%;
+    bottom: 120%; */
+}
+/* .questionnaire-result-text-big{
+    display: flex;
+    align-content: flex-end;
+} */
+
+
+#questionnaire{
+    border: 1px dotted black;
+}
+#questionnaire-result{
+    border: 1px solid blueviolet;
+}
+
+
+footer{
+    text-align: center;
+    font-size: 8px;
+    color: #4267B2
+}
+footer a {
+    color: #4267B2;
+}
