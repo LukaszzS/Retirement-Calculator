@@ -13,7 +13,9 @@ header .glyph-icon{
     animation-name: swing;
     animation-duration: 5s;
     animation-iteration-count: infinite;
+
 }
+
 @keyframes swing
 {
     0% {
@@ -22,15 +24,15 @@ header .glyph-icon{
     75%{
     transform: rotate(-5deg);
     }
-    /* 50%{
+    50%{
     transform: rotate(5deg);
-    } */
-    /* 75% {
+    }
+    75% {
     transform: rotate(5deg);
-    } */
-    /* 100% {
+    }
+    100% {
     transform: rotate(0);
-    } */
+    }
 }
 .header-container{
     display: flex;
@@ -48,27 +50,76 @@ header .glyph-icon{
     margin-top:40px;
 }
 #questionnaire button{
-    margin-bottom: 3px;
+    margin-bottom: 8px;
     border:transparent;
     background-color: rgb(224, 216, 198);
     cursor: pointer;
     outline: 0;
-    animation-name: bell;
+    /* animation-name: bell;
     animation-duration: 0.5s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; */
+/* } */
+animation: bell 1s ease-in-out 0.5s infinite alternate;
+
+/* -webkit-animation: shake 1s ease-in-out 0.5s infinite alternate; */
 }
-@keyframes bell
+
+@-webkit-keyframes bell {
+ from {
+    -webkit-transform: rotate(10deg);
+ }
+ to {
+   -webkit-transform-origin:center center;
+   -webkit-transform: rotate(-10deg);
+ }
+
+}
+/* @keyframes bell {
+    0%,
+    100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+    }
+    10% {
+      -webkit-transform: rotate(2deg);
+              transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: rotate(-4deg);
+              transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+      -webkit-transform: rotate(4deg);
+              transform: rotate(4deg);
+    }
+    80% {
+      -webkit-transform: rotate(-2deg);
+              transform: rotate(-2deg);
+    }
+    90% {
+      -webkit-transform: rotate(2deg);
+              transform: rotate(2deg);
+    }
+  } */ 
+/* @keyframes bell
 {
     0% {
     transform: rotateZ(5deg);
     }
     75% {
+    transform-origin:center center;
     transform: rotateZ(-5deg);
     }
     100% {
     transform: rotateZ(5deg);
     }
-}
+} */
 #questionnaire p{
     color:rgb(52, 36, 17);
     text-align: center;
@@ -96,11 +147,11 @@ header .glyph-icon{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .questionnaire-result-img{
     width: 50%;
-    background-image: url(/img/emeryt-menC.png);
+    background-image: url(../styles/img/emeryt-menC.png);
     background-size: contain;
     background-position: left;
     background-repeat: no-repeat;
