@@ -55,25 +55,25 @@ header .glyph-icon{
     background-color: rgb(224, 216, 198);
     cursor: pointer;
     outline: 0;
-    /* animation-name: bell;
+    animation-name: bell;
     animation-duration: 0.5s;
-    animation-iteration-count: infinite; */
+    animation-iteration-count: infinite;
 /* } */
-animation: bell 1s ease-in-out 0.5s infinite alternate;
+/* -webkit-animation: bell 0.1s ease-in-out 0.5s infinite alternate; */
 
 /* -webkit-animation: shake 1s ease-in-out 0.5s infinite alternate; */
 }
 
-@-webkit-keyframes bell {
+/* @keyframes bell {
  from {
-    -webkit-transform: rotate(10deg);
+ transform: rotate(5deg);
  }
  to {
-   -webkit-transform-origin:center center;
-   -webkit-transform: rotate(-10deg);
+ transform-origin:center center;
+ transform: rotate(-5deg);
  }
 
-}
+} */
 /* @keyframes bell {
     0%,
     100% {
@@ -107,7 +107,7 @@ animation: bell 1s ease-in-out 0.5s infinite alternate;
               transform: rotate(2deg);
     }
   } */ 
-/* @keyframes bell
+@keyframes bell
 {
     0% {
     transform: rotateZ(5deg);
@@ -119,7 +119,7 @@ animation: bell 1s ease-in-out 0.5s infinite alternate;
     100% {
     transform: rotateZ(5deg);
     }
-} */
+}
 #questionnaire p{
     color:rgb(52, 36, 17);
     text-align: center;
