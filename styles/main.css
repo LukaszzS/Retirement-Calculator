@@ -7,6 +7,7 @@ body {
   }
   .glyph-icon {
     padding: 10px;
+    margin-left: -70px;
   }
   .header-container {
     display: flex;
@@ -16,15 +17,18 @@ body {
     color: rgb(224, 216, 198);
   }
   .header-container h1 {
-    font-size: 48px;
+    font-size: 30px;
+    text-align: center;
   }
   #question {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 2px;
   }
   #question button {
     margin-bottom: 8px;
+    margin-top: 15%;
     border: transparent;
     background-color: rgb(224, 216, 198);
     outline: 0;
@@ -45,8 +49,8 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 190%;
-    font-size: 24px;
-    margin-left: 40px;
+    font-size: 21px;
+    margin-left: 5px;
   }
   .cash {
     position: relative;
@@ -77,6 +81,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10%;
   }
   .question-result-img {
     height: 300px;
@@ -128,7 +134,7 @@ body {
     text-align: center;
   }
   .result {
-    margin-top: 30px;
+    margin: 30px 0;
     color: red;
     font-size: 48px;
     text-align: center;
@@ -144,15 +150,16 @@ body {
     color: rgb(52, 36, 17);
     font-size: 24px;
     width: 300px;
-    margin-left: 30px;
+    margin-top: 20px;
+    text-align: center;
   }
   .btn-text-result{
     display: flex;
     justify-content: center;
-    margin-left: 53px;
-
+    margin-top: 10px;
   }
   #btn-view-result {
+    padding-left: 30px;
     margin-left: 60px;
     display: flex;
     justify-content: center;
@@ -294,3 +301,43 @@ body {
       transform: rotate(2deg);
     }
   }
+  @media screen and (min-width: 768px) {
+    .header-container h1 {
+        font-size: 42px;
+    }
+    #question button {
+        margin-top: 0;
+      }
+      #question {
+        flex-wrap: unset;
+        margin-top: 40px;
+      }
+    .question-result {
+        flex-wrap: unset;
+        margin-top: 0;
+      }
+    .label,
+    .input {
+        font-size: 21px;
+        margin-left: 40px;
+      }
+    .btn-text-result{
+        margin-left: 53px;
+        margin-top: 0;
+      }
+    .result {
+        margin-bottom: 30px;
+      }
+    .nowa {
+        margin-top: 0;
+        margin-left: 30px;
+        text-align: unset;
+      }
+}
+  @media screen and (min-width: 992px) {
+   .label,
+      .input {
+        font-size: 24px;
+        margin-left: 40px;
+      }
+}
