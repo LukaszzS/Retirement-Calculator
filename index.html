@@ -1,59 +1,61 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl_PL">
 <head>
-        <title>Kalkulator emerytury</title>
-        <link rel="stylesheet" href="styles/reset.css">
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="icons/fontawesome-free-5.8.2-web/css/all.css">
-        <link rel="stylesheet" href="icons/flaticon.css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kalkulator emerytury</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="icons/flaticon.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="icons/fontawesome-free-5.8.2-web/css/all.css">
 </head>
 <body>
+    <script src="script.js"></script>
 <header>
-        <div class="header-container">
+    <div class="header-container">
         <i class="glyph-icon flaticon-pension"></i>
-        <h1>Kalkulator szczęścia na emeryturze.</h1>
-        </div>
-</header>
-
-<section id="question">
-    <div class="question">
-        <div class="lebel-all">
-            <lebel>Ile zarabiasz?</i></lebel>
-            <lebel>Ile masz lat?</i></lebel>
-            <lebel>Ile masz oszczędności?</i></lebel>
-            <lebel>Kiedy przejdziesz na emeryturę?</i></lebel>
-            <lebel>Ile lat chciałbyś żyć?</i></lebel>
-            <lebel>Ile chcesz dostawać na emeryturze?</i></lebel>
-        </div>
-        <div class="input-all">
-           <input type="number" min="0" id="payment" placeholder="napisz...">
-           <input type="number" min="0" id="age" maxlength=2 placeholder="napisz...">
-           <input type="number" id="saving" placeholder="napisz...">
-           <input type="number" min="0" id="retirement" maxlength=2 placeholder="napisz...">
-           <input type="number" min="0" id="death" maxlength=3 placeholder="napisz...">
-           <input type="number" min="0" id="pension" placeholder="napisz...">
-        </div>
+        <h1 class="title-header">Kalkulator szczęścia na emeryturze.</h1>
     </div>
-        <div>
+</header>
+<section id="question">
+    <div class="label">
+        <lebel>Ile masz lat?</i></lebel>
+        <lebel>Ile masz oszczędności?</i></lebel>
+        <lebel>Kiedy przejdziesz na emeryturę?</i></lebel>
+        <lebel>Ile lat chciałbyś żyć?</i></lebel>
+        <lebel>Ile chcesz dostawać na emeryturze?</i></lebel>
+    </div>
+    <div class="input">
+        <div class="alt"><input type="number" min="5" id="age" maxlength=2 placeholder="wpisz..."required></div>
+        <div class="cash"><input type="number" id="saving" placeholder="wpisz..."required></div>
+        <div class="alt"><input  type="number" min="5" id="retirement" maxlength=2 placeholder="wpisz..."required></div>
+        <div class="alt"><input type="number" min="5" id="death" maxlength=3 placeholder="wpisz..."required></div>
+        <div class="cash"><input  type="number" min="5" id="pension" placeholder="wpisz..." required></div>
+    </div>
+    <div class="result-text-btn">
+        <div id="btn-view-result">
             <button class="glyph-icon flaticon-money"></button>
-            <p><span>&#8593; &#8593;</span> Przelicz<span> &#8593; &#8593;</span></p>
+        </div>
+            <div class="btn-text-result">
+            <p> <span> &#8593; &#8593; </span> Przelicz <span> &#8593; &#8593; </span></p>
+            </div>
         </div>
 </section>
 <section class="question-result">
-<div class="question-result-img">
-        <h1>Nasz kalkulator policzy ile będziesz musiał/a miesięcznie odkładać, aby osiągnąć takie wynagrodzenie na emeryturze.</h1>
-    </div>
-    <div class="result">kasa
-        <h3>ABY ZOSTAĆ SZCZĘŚLIWYM EMERYTEM MUSISZ ODKŁADAĆ:</h3>
+    <div class="question-result-img">
+        <div class="laska"></div>
+        </div>
+    <div class="nowa"><h1>Nasz kalkulator policzy ile będziesz musiał/a miesięcznie odkładać, aby osiągnąć takie wynagrodzenie na emeryturze.</h1></div>
+    <div class="sum">
+        <h1 class="title">Aby zostać szczęśliwym emerytem musisz odkładać</h1>
+        <div id="result" class="result">-</div>
     </div>
 </section>
 <footer>&copy; Copyright 2019 by Lukasz
     <a class="fab fa-facebook-square" href="https://www.facebook.com/" target="_blank"></a>
-    <a class="fas fa-mobile-alt" title="+48 666 666 666"></a>
+    <a class="fas fa-mobile-alt" title="+48 606 125 721"></a>
 </footer>
-
-<script src="script.js"></script>
 </body>
 </html>
