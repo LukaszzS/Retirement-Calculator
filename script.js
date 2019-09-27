@@ -4,6 +4,7 @@ let addBtn;
 let resulthtml;
 let dialog;
 let input;
+let inputsWithError = []
 
 function main() {
   searchForElements();
@@ -25,107 +26,79 @@ function searchForElements() {
 }
 
 function prepareDOMEvents() {
-  addBtn.addEventListener("click", calculateResult,stopInterval);
+  addBtn.addEventListener("click", calculateResult);
 }
 
-function iliterateInput(){
-  for (let i = 0; i < input.length; i++ ){
-    input[i].style.border = "1px red solid"
-  }
-defaultColor = setInterval(iliterateInputDefault, 4000);
+function iliterateInput() {
+  inputsWithError.forEach(el => { el.classList.add("error"); })
+
+setInterval(iliterateInputDefault, 4000)
+
 }
 
-function iliterateInputDefault(){
-  for (let i = 0; i < input.length; i++ ){
-    input[i].style.border = "1px grey solid"
-  }
+function iliterateInputDefault() {
+  input.forEach(el => { el.classList.add("default");  })
 }
 
-function dialogm(){
+function dialogm() {
   dialognone = setInterval(dialognone, 5000);
-  dialog.innerHTML = `<h1>Hej kolego/koleżanko</h1>
+  dialog.innerHTML = `<h1>Hej ktoś zostawił puste pola</h1>
   <h2>chyba musisz coś wpisać !!</h2>`;
-  dialog.style.display ="block";
+  dialog.style.display = "block";
 }
 
-function dialogstart(){
+function dialogstart() {
   dialognone = setInterval(dialognone, 5000);
   dialog.innerHTML = `<h1>Nie ma na co czekać,</h1>
   <h2>uzupełnij wszystkie pola.</h2>`;
-  dialog.style.display ="block";
+  dialog.style.display = "block";
 }
 
-function dialogproblem(){
+function dialogproblem() {
   dialognone = setInterval(dialognone, 5000);
   dialog.innerHTML = `<h1>Hej,</h1>
   <h2>chyba coś ściemniasz.</h2>`;
-  dialog.style.display ="block";
+  dialog.style.display = "block";
 }
 
-function dialogend(){
+function dialogend() {
   dialognone = setInterval(dialognone, 5000);
   dialog.innerHTML = `<h1>No i teraz</h1>
   <h2>wszystko jasne.</h2>`;
-  dialog.style.display ="block";
+  dialog.style.display = "block";
 }
 
-function dialognone(){
-   dialog.style.display ="none";
+function dialognone() {
+  dialog.style.display = "none";
 }
 
-function stopInterval(){
-  clearInterval(dialognone)
+function stopInterval() {
+  clearInterval(dialognone);
+  clearInterval(iliterateInputDefault);
 }
 
-function validateLoop(input){
-  for (let i = 0; i < input.length; i++ ){
-    input[i].value
-    return
+function validateLoop(input) {
+  for (let i = 0; i < input.length; i++) {
+    if (input[i].value === '') {
+      inputsWithError.push((input[i]))
+      iliterateInput();
+      dialogm();
+    }
+
   }
-}
-
-function validateForm(
-  ageInput,
-  savingInput,
-  retirementInput,
-  deathInput,
-  pensionInput
-){
-    if (
-    (ageInput,
-      savingInput,
-      retirementInput,
-      deathInput,
-      pensionInput === Number())
-  ) {
-    calculateResult();
-
-  } else if (
-    (ageInput,
-      savingInput,
-      retirementInput,
-      deathInput,
-      pensionInput === "")
-  ) {
-    dialogm();
-    iliterateInput();
-  }
+  iliterateInput();
+  dialogm();
 }
 
 function calculateResult() {
+  stopInterval();
+  validateLoop(input);
+
   let ageInput = age.value;
   let savingInput = saving.value;
   let retirementInput = retirement.value;
   let deathInput = death.value;
   let pensionInput = pension.value;
-
-  validateForm(
-    ageInput,
-    savingInput,
-    retirementInput,
-    deathInput,
-    pensionInput
-  );
 
   let timeToRetire = (Math.floor(retirementInput) - Math.floor(ageInput)) * Math.floor(12);
   let retiredYears = (Math.floor(deathInput) - Math.floor(retirementInput)) * Math.floor(12);
@@ -134,17 +107,18 @@ function calculateResult() {
   let resultOfEquations = Math.floor(savingTime) / Math.floor(timeToRetire);
 
   console.log(Math.floor(resultOfEquations));
-  if(resultOfEquations >= 1){
+  if (resultOfEquations >= 1) {
     show_result(resultOfEquations);
     dialogend();
-  }if(resultOfEquations === Infinity || resultOfEquations === -Infinity ){
+  }
+  if (resultOfEquations === Infinity || resultOfEquations === -Infinity) {
     dialogproblem();
     return;
-     }
   }
+}
 
 function show_result(resultOfEquations) {
-  resulthtml.innerHTML =+ Math.floor(resultOfEquations) + " zł" + "<br>"+ " miesięcznie";
-  }
+  resulthtml.innerHTML = +Math.floor(resultOfEquations) + " zł" + "<br>" + " miesięcznie";
+}
 
 document.addEventListener("DOMContentLoaded", main);
